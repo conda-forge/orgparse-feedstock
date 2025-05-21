@@ -1,5 +1,5 @@
 {% set name = "orgparse" %}
-{% set version = "0.4.20231004" %}
+{% set version = "0.4.20250520" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/orgparse-{{ version }}.tar.gz
-  sha256: a4e38aeadabf9988b0f67a66acd08279d18220bcbc422a129060c2890bba91a0
+  sha256: 6472fd16ddcabb523918505c865263abfa05ac80b593e668a089cda291b1a2de
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
